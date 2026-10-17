@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple static website demo for Cloudflare Pages and custom-domain testing.">
+  <title>BrightSite — Cloudflare Pages Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="BrightSite home"><span class="brand-mark">B</span> BrightSite</a>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> STATIC WEBSITE DEMO</p>
+        <h1>Your website,<br><span>live on the edge.</span></h1>
+        <p class="hero-text">A lightweight sample website to test GitHub → Cloudflare Pages deployment, HTTPS, and your custom domain.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Try the contact form <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="#features">Explore the page</a>
+        </div>
+        <div class="trust-row"><span class="check">✓</span> No framework needed <span class="dot">·</span> HTML, CSS & JavaScript</div>
+      </div>
+      <div class="hero-card" aria-label="Deployment status illustration">
+        <div class="card-top"><span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span><span class="card-label">deployment-status</span></div>
+        <div class="status-line"><span class="status-icon">✓</span><div><strong>Build successful</strong><small>Static assets ready to serve</small></div><span class="status-pill">READY</span></div>
+        <div class="code-lines" aria-hidden="true"><i style="width:38%"></i><i style="width:72%"></i><i style="width:54%"></i><i style="width:84%"></i><i style="width:46%"></i></div>
+        <div class="edge-footer"><span class="edge-icon">✦</span><span>Served globally with Cloudflare Pages</span></div>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Website highlights">
+      <div><strong>7–8</strong><span>Pages ready to expand</span></div>
+      <div><strong>50</strong><span>Images supported in your project</span></div>
+      <div><strong>0₹</strong><span>Static hosting on Free plan*</span></div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading"><p class="eyebrow">WHY THIS SETUP</p><h2>Simple by design.</h2><p>Everything here is static, so you can publish it without a server or database.</p></div>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-icon">⚡</div><h3>Fast pages</h3><p>Small HTML, CSS and JavaScript files keep the site lightweight.</p></article>
+        <article class="feature"><div class="feature-icon">🔒</div><h3>HTTPS ready</h3><p>Cloudflare Pages can provide HTTPS for your Pages address and configured custom domain.</p></article>
+        <article class="feature"><div class="feature-icon">↗</div><h3>Easy updates</h3><p>Push changes to GitHub and let Cloudflare deploy the updated site.</p></article>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div><p class="eyebrow">ABOUT THIS DEMO</p><h2>One small project.<br>Ready for your domain.</h2></div>
+      <p>After deployment, open the <strong>*.pages.dev</strong> URL first. Then add your domain in Cloudflare Pages and follow the DNS instructions shown in the dashboard. A domain registration itself may cost money.</p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="section-heading"><p class="eyebrow">SAY HELLO</p><h2>Test the contact form.</h2><p>This demo validates the form in your browser. It does not send an email yet.</p></div>
+      <form id="contact-form" class="contact-form">
+        <div class="form-row">
+          <label>Name<input name="name" type="text" placeholder="Your name" required></label>
+          <label>Email<input name="email" type="email" placeholder="you@example.com" required></label>
+        </div>
+        <label>Message<textarea name="message" rows="4" placeholder="What would you like to say?" required></textarea></label>
+        <button class="button button-primary" type="submit">Test form <span aria-hidden="true">→</span></button>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#"><span class="brand-mark">B</span> BrightSite</a><p>Cloudflare Pages demo · Replace this with your own brand.</p><span>© <span id="year"></span> BrightSite</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
